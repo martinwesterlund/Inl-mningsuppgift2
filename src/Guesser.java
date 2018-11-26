@@ -30,7 +30,6 @@ public class Guesser{
             this.low = low;
             this.high = high;
         }else throw new IllegalArgumentException("The first parameter must be lower than the second parameter");
-
     }
 
     /*
@@ -102,6 +101,9 @@ public class Guesser{
                 guess +
                 " (took me " + numberOfGuesses +
                 " guesses)");
+    }
+    public String toString(){
+        return "low: " + low + " high: " + high;
     }
 
 }
