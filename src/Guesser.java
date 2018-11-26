@@ -29,7 +29,7 @@ public class Guesser{
         if(low < high && low >= 0 && high <=1000){
             this.low = low;
             this.high = high;
-        }
+        }else throw new IllegalArgumentException("The first parameter must be lower than the second parameter");
 
     }
 
