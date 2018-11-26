@@ -64,7 +64,7 @@ public class Guesser{
      * the player.
      */
     private String getReply(){
-        String reply = null;
+        String reply = "";
         // Write code here which reads a String from the console.
         // As long as it is not a valid reply (one of "T" and "F")
         // write an error message, and read a new reply.
