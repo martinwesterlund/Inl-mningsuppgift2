@@ -71,7 +71,7 @@ public class Guesser{
         // When you have gotten a valid reply, return it.
         while
         (!reply.equals("F") && !reply.equals("T")) {
-            System.out.println("Please enter T (True) or F (False).");
+            System.out.println("Please answer T or F!");
             reply = new Scanner(System.in).nextLine();
         }
         return reply;
