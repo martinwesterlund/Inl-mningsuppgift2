@@ -1,5 +1,6 @@
 import java.io.Console;
 import java.util.Scanner;
+import java.util.Objects;
 
 /**
  * Assignment 1 - Guessing Game
@@ -27,7 +28,7 @@ public class Guesser{
 
 
     public Guesser(int low, int high) {
-        if(low < high && low >= 0 && high <=1000){
+        if(low < high){
             this.low = low;
             this.high = high;
         }else throw new IllegalArgumentException("Invalid numbers!!");
@@ -64,13 +65,14 @@ public class Guesser{
      * the player.
      */
     private String getReply(){
-        String reply = "";
+        String reply = null;
         // Write code here which reads a String from the console.
         // As long as it is not a valid reply (one of "T" and "F")
         // write an error message, and read a new reply.
         // When you have gotten a valid reply, return it.
+        reply = new Scanner(System.in).nextLine();
         while
-        (!reply.equals("F") && !reply.equals("T")) {
+        (!Objects.equals(reply, "T") && !Objects.equals(reply, "F")) {
             System.out.println("Please answer T or F!");
             reply = new Scanner(System.in).nextLine();
         }
